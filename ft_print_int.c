@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboiarin <aboiarin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boiarinov <boiarinov@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 17:40:22 by aboiarin          #+#    #+#             */
-/*   Updated: 2023/06/08 15:32:37 by aboiarin         ###   ########.fr       */
+/*   Updated: 2023/07/04 17:08:55 by boiarinov        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,8 @@ static void	ft_putnbr_local(long n, char *nbstr, int *i)
 static char	*ft_itoa(long n)
 {
 	char	*nbstr;
-	int		len;
 	int		i;
 
-	len = ft_int_len(n);
 	nbstr = ft_calloc((ft_int_len(n) + 1), sizeof(char));
 	if (!nbstr)
 		return (0);

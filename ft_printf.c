@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aboiarin <aboiarin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boiarinov <boiarinov@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 13:53:58 by aboiarin          #+#    #+#             */
-/*   Updated: 2023/06/08 16:17:50 by aboiarin         ###   ########.fr       */
+/*   Updated: 2023/07/04 17:10:28 by boiarinov        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ static int	ft_print_arg(char type, va_list args)
 
 	count = 0;
 	if (type == '%')
-		count += ft_print_char(type);
+		count += ft_print_c(type);
 	else if (type == 'c')
-		count += ft_print_char(va_arg(args, int));
+		count += ft_print_c(va_arg(args, int));
 	else if (type == 's')
 		count += ft_print_str(va_arg(args, char *));
 	else if (type == 'd' || type == 'i')
